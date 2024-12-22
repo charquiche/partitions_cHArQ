@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \header {
-  title = "Triades majeures"
+  title = "Triades majeures : 3 ou 4 sons rooted bis"
   subtitle = "Echelle Chromatique"
   author ="cHArQ"
 }
@@ -273,7 +273,7 @@ triades_root_oct_maj_chord = \relative c' {
   \transpose c d   {\motif_root_oct_maj_chord}
   \transpose c des {\motif_root_oct_maj_chord}
   |%
-  <c e g c' >1
+  <c e g c >1
   |%
 }
 
