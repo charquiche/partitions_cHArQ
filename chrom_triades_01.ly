@@ -183,10 +183,13 @@ triades_root_maj_broken_deux = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 motif_maj_trois = \relative c'{
-  c'16 g e8  
+  c,,16 g' e8  
 }
 triades_root_maj_broken_trois = \relative c' {
-  \global
+  \clef bass
+  \key c \major
+  \time 4/4
+  
   \motif_maj_trois
   \transpose c des {\motif_maj_trois}
   \transpose c d   {\motif_maj_trois}
@@ -233,4 +236,59 @@ triades_root_maj_broken_trois = \relative c' {
     \tempo 4=60
   }
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+motif_root_oct_maj_chord = \relative c'{
+  <c e g c>4 
+}
+triades_root_oct_maj_chord = \relative c' {
+  \global
+  <c^1_5 e^2_4 g^3_3 c^5_1>4 
+  \transpose c des {\motif_root_oct_maj_chord}
+  \transpose c d   {\motif_root_oct_maj_chord}
+  \transpose c ees {\motif_root_oct_maj_chord}
+  |%
+  \transpose c e   {\motif_root_oct_maj_chord}
+  \transpose c f   {\motif_root_oct_maj_chord}
+  \transpose c fis {\motif_root_oct_maj_chord}
+  \transpose c g   {\motif_root_oct_maj_chord}
+  |%
+  \transpose c aes {\motif_root_oct_maj_chord}
+  \transpose c a   {\motif_root_oct_maj_chord}
+  \transpose c bes {\motif_root_oct_maj_chord}
+  \transpose c b   {\motif_root_oct_maj_chord}
+  |%
+  \transpose c c'  {\motif_root_oct_maj_chord}
+  \transpose c b   {\motif_root_oct_maj_chord}
+  \transpose c bes {\motif_root_oct_maj_chord}
+  \transpose c a   {\motif_root_oct_maj_chord}
+  |%
+  \transpose c aes {\motif_root_oct_maj_chord}
+  \transpose c g   {\motif_root_oct_maj_chord}
+  \transpose c fis {\motif_root_oct_maj_chord}
+  \transpose c f   {\motif_root_oct_maj_chord}
+  |%
+  \transpose c e   {\motif_root_oct_maj_chord}
+  \transpose c des {\motif_root_oct_maj_chord}
+  \transpose c d   {\motif_root_oct_maj_chord}
+  \transpose c des {\motif_root_oct_maj_chord}
+  |%
+  <c e g c' >1
+  |%
+}
+
+%-------------------------------------------------------------------------
+\score {
+   <<
+    \new Staff = "triades_root_oct_maj_chord" \with {
+      midiInstrument = "acoustic grand"
+    } 
+    \triades_root_oct_maj_chord
+   >>
+  \layout { }
+  \midi {
+    \tempo 4=60
+  }
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
