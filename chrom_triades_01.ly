@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \header {
-  title = "Triades majeures"
+  title = "Triades majeures : 3 ou 4 sons"
   subtitle = "Echelle Chromatique"
   author ="cHArQ"
 }
