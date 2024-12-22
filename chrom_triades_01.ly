@@ -180,3 +180,57 @@ triades_root_maj_broken_deux = \relative c' {
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+motif_maj_trois = \relative c'{
+  c'16 g e8  
+}
+triades_root_maj_broken_trois = \relative c' {
+  \global
+  \motif_maj_trois
+  \transpose c des {\motif_maj_trois}
+  \transpose c d   {\motif_maj_trois}
+  \transpose c ees {\motif_maj_trois}
+  |%
+  \transpose c e {\motif_maj_trois}
+  \transpose c f {\motif_maj_trois}
+  \transpose c fis {\motif_maj_trois}
+  \transpose c g {\motif_maj_trois}
+  |%
+  \transpose c aes {\motif_maj_trois}
+  \transpose c a {\motif_maj_trois}
+  \transpose c bes {\motif_maj_trois}
+  \transpose c b {\motif_maj_trois}
+  |%
+  \transpose c c' {\motif_maj_trois}
+  \transpose c b {\motif_maj_trois}
+  \transpose c bes {\motif_maj_trois}
+  \transpose c a {\motif_maj_trois}
+  |%
+  \transpose c aes {\motif_maj_trois}
+  \transpose c g {\motif_maj_trois}
+  \transpose c fis {\motif_maj_trois}
+  \transpose c f {\motif_maj_trois}
+  |%
+  \transpose c e {\motif_maj_trois}
+  \transpose c des {\motif_maj_trois}
+  \transpose c d {\motif_maj_trois}
+  \transpose c des {\motif_maj_trois}
+  |%
+  c16 g e8~e2.
+  |%
+}
+%-------------------------------------------------------------------------
+\score {
+   <<
+    \new Staff = "triades_root_maj_broken_trois" \with {
+      midiInstrument = "acoustic grand"
+    } 
+    \triades_root_maj_broken_trois
+   >>
+  \layout { }
+  \midi {
+    \tempo 4=60
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
