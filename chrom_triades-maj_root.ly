@@ -5,8 +5,9 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \header {
-  title = "Triades majeures : 3 ou 4 sons"
-  subtitle = "Echelle Chromatique, positions fondamentales"
+  title = "Triades majeures , rooted ( 3 sons ) "
+  subtitle = "Echelle Chromatique "
+  subsubtitle = "Six manières d'ordonner trois notes ..."
   author ="cHArQ"
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -374,8 +375,8 @@ triades_root_maj_broken_cinq = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%   Triades 3 sons broken-six
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-motif_maj_six = \relative c {
-  e16 g c,8  
+motif_maj_six = \relative c' {
+  e16 c g'8  
 }
 triades_root_maj_broken_six = \relative c' {
   \clef treble
@@ -383,36 +384,36 @@ triades_root_maj_broken_six = \relative c' {
   \time 4/4
   
   \motif_maj_six
-  \transpose c des {\motif_maj_cinq}
-  \transpose c d   {\motif_maj_cinq}
-  \transpose c ees {\motif_maj_cinq}
+  \transpose c des {\motif_maj_six}
+  \transpose c d   {\motif_maj_six}
+  \transpose c ees {\motif_maj_six}
   |%
-  \transpose c e {\motif_maj_cinq}
-  \transpose c f {\motif_maj_cinq}
-  \transpose c fis {\motif_maj_cinq}
-  \transpose c g {\motif_maj_cinq}
+  \transpose c e {\motif_maj_six}
+  \transpose c f {\motif_maj_six}
+  \transpose c fis {\motif_maj_six}
+  \transpose c g {\motif_maj_six}
   |%
-  \transpose c aes {\motif_maj_cinq}
-  \transpose c a {\motif_maj_cinq}
-  \transpose c bes {\motif_maj_cinq}
-  \transpose c b {\motif_maj_cinq}
+  \transpose c aes {\motif_maj_six}
+  \transpose c a {\motif_maj_six}
+  \transpose c bes {\motif_maj_six}
+  \transpose c b {\motif_maj_six}
   |%
-  \transpose c c' {\motif_maj_cinq}
-  \transpose c b {\motif_maj_cinq}
-  \transpose c bes {\motif_maj_cinq}
-  \transpose c a {\motif_maj_cinq}
+  \transpose c c' {\motif_maj_six}
+  \transpose c b {\motif_maj_six}
+  \transpose c bes {\motif_maj_six}
+  \transpose c a {\motif_maj_six}
   |%
-  \transpose c aes {\motif_maj_cinq}
-  \transpose c g {\motif_maj_cinq}
-  \transpose c fis {\motif_maj_cinq}
-  \transpose c f {\motif_maj_cinq}
+  \transpose c aes {\motif_maj_six}
+  \transpose c g {\motif_maj_six}
+  \transpose c fis {\motif_maj_six}
+  \transpose c f {\motif_maj_six}
   |%
-  \transpose c e {\motif_maj_cinq}
-  \transpose c des {\motif_maj_cinq}
-  \transpose c d {\motif_maj_cinq}
-  \transpose c des {\motif_maj_cinq}
+  \transpose c e {\motif_maj_six}
+  \transpose c des {\motif_maj_six}
+  \transpose c d {\motif_maj_six}
+  \transpose c des {\motif_maj_six}
   |%
-  e,16 g c,8~c2.
+  e16 c g'8~g2.
   |%
 }
 %-------------------------------------------------------------------------
@@ -431,63 +432,4 @@ triades_root_maj_broken_six = \relative c' {
     \tempo 4=60
   }
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%   Triades 4 sons root_chord
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-motif_root_oct_maj_chord = \relative c'{
-  <c e g c>4 
-}
-triades_root_oct_maj_chord = \relative c' {
-  \global
-  <c^1_5 e^2_4 g^3_3 c^5_1>4 
-  \transpose c des {\motif_root_oct_maj_chord}
-  \transpose c d   {\motif_root_oct_maj_chord}
-  \transpose c ees {\motif_root_oct_maj_chord}
-  |%
-  \transpose c e   {\motif_root_oct_maj_chord}
-  \transpose c f   {\motif_root_oct_maj_chord}
-  \transpose c fis {\motif_root_oct_maj_chord}
-  \transpose c g   {\motif_root_oct_maj_chord}
-  |%
-  \transpose c aes {\motif_root_oct_maj_chord}
-  \transpose c a   {\motif_root_oct_maj_chord}
-  \transpose c bes {\motif_root_oct_maj_chord}
-  \transpose c b   {\motif_root_oct_maj_chord}
-  |%
-  \transpose c c'  {\motif_root_oct_maj_chord}
-  \transpose c b   {\motif_root_oct_maj_chord}
-  \transpose c bes {\motif_root_oct_maj_chord}
-  \transpose c a   {\motif_root_oct_maj_chord}
-  |%
-  \transpose c aes {\motif_root_oct_maj_chord}
-  \transpose c g   {\motif_root_oct_maj_chord}
-  \transpose c fis {\motif_root_oct_maj_chord}
-  \transpose c f   {\motif_root_oct_maj_chord}
-  |%
-  \transpose c e   {\motif_root_oct_maj_chord}
-  \transpose c des {\motif_root_oct_maj_chord}
-  \transpose c d   {\motif_root_oct_maj_chord}
-  \transpose c des {\motif_root_oct_maj_chord}
-  |%
-  <c e g c >1
-  |%
-}
-
-%-------------------------------------------------------------------------
-\score {
-   <<
-    \new Staff = "triades_root_oct_maj_chord" \with {
-      midiInstrument = "acoustic grand"
-      instrumentName = \markup { \concat {N \super ° } 8 }
-    %\override InstrumentName.self-alignment-X = #RIGHT
-    \override InstrumentName.font-series = #'bold
-    } 
-    \triades_root_oct_maj_chord
-   >>
-  \layout { }
-  \midi {
-    \tempo 4=60
-  }
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
