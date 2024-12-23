@@ -374,8 +374,8 @@ triades_root_maj_broken_cinq = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%   Triades 3 sons broken-six
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-motif_maj_six = \relative c {
-  e16 g c,8  
+motif_maj_six = \relative c' {
+  e16 c g'8  
 }
 triades_root_maj_broken_six = \relative c' {
   \clef treble
@@ -383,36 +383,36 @@ triades_root_maj_broken_six = \relative c' {
   \time 4/4
   
   \motif_maj_six
-  \transpose c des {\motif_maj_cinq}
-  \transpose c d   {\motif_maj_cinq}
-  \transpose c ees {\motif_maj_cinq}
+  \transpose c des {\motif_maj_six}
+  \transpose c d   {\motif_maj_six}
+  \transpose c ees {\motif_maj_six}
   |%
-  \transpose c e {\motif_maj_cinq}
-  \transpose c f {\motif_maj_cinq}
-  \transpose c fis {\motif_maj_cinq}
-  \transpose c g {\motif_maj_cinq}
+  \transpose c e {\motif_maj_six}
+  \transpose c f {\motif_maj_six}
+  \transpose c fis {\motif_maj_six}
+  \transpose c g {\motif_maj_six}
   |%
-  \transpose c aes {\motif_maj_cinq}
-  \transpose c a {\motif_maj_cinq}
-  \transpose c bes {\motif_maj_cinq}
-  \transpose c b {\motif_maj_cinq}
+  \transpose c aes {\motif_maj_six}
+  \transpose c a {\motif_maj_six}
+  \transpose c bes {\motif_maj_six}
+  \transpose c b {\motif_maj_six}
   |%
-  \transpose c c' {\motif_maj_cinq}
-  \transpose c b {\motif_maj_cinq}
-  \transpose c bes {\motif_maj_cinq}
-  \transpose c a {\motif_maj_cinq}
+  \transpose c c' {\motif_maj_six}
+  \transpose c b {\motif_maj_six}
+  \transpose c bes {\motif_maj_six}
+  \transpose c a {\motif_maj_six}
   |%
-  \transpose c aes {\motif_maj_cinq}
-  \transpose c g {\motif_maj_cinq}
-  \transpose c fis {\motif_maj_cinq}
-  \transpose c f {\motif_maj_cinq}
+  \transpose c aes {\motif_maj_six}
+  \transpose c g {\motif_maj_six}
+  \transpose c fis {\motif_maj_six}
+  \transpose c f {\motif_maj_six}
   |%
-  \transpose c e {\motif_maj_cinq}
-  \transpose c des {\motif_maj_cinq}
-  \transpose c d {\motif_maj_cinq}
-  \transpose c des {\motif_maj_cinq}
+  \transpose c e {\motif_maj_six}
+  \transpose c des {\motif_maj_six}
+  \transpose c d {\motif_maj_six}
+  \transpose c des {\motif_maj_six}
   |%
-  e,16 g c,8~c2.
+  e16 c g'8~g2.
   |%
 }
 %-------------------------------------------------------------------------
