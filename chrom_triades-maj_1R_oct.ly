@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%
 \header {
-  title = "Triades majeures rooted : 4 sons"
+  title = "Triades majeures, 1er renversement : 4 sons"
   subtitle = "Echelle Chromatique, "
   subsubtitle = "Doublure de la basse, à l'octave supérieur."
   author ="cHArQ"
@@ -19,40 +19,40 @@ global = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%   Triades 4 sons root_chord
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-motif_root_oct_maj_chord = \relative c'{
-  <c e g c>4 
+motif_fi_oct_maj_chord = \relative c'{
+  <e g c e >4 
 }
 triades_root_oct_maj_chord = \relative c' {
   \global
-  <c^1_5 e^2_4 g^3_3 c^5_1>4 
-  \transpose c des {\motif_root_oct_maj_chord}
-  \transpose c d   {\motif_root_oct_maj_chord}
-  \transpose c ees {\motif_root_oct_maj_chord}
+  <e^1_5 g^2_4 c^4_2 e^5_1>4 
+  \transpose c des {\motif_fi_oct_maj_chord}
+  \transpose c d   {\motif_fi_oct_maj_chord}
+  \transpose c ees {\motif_fi_oct_maj_chord}
   |%
-  \transpose c e   {\motif_root_oct_maj_chord}
-  \transpose c f   {\motif_root_oct_maj_chord}
-  \transpose c fis {\motif_root_oct_maj_chord}
-  \transpose c g   {\motif_root_oct_maj_chord}
+  \transpose c e   {\motif_fi_oct_maj_chord}
+  \transpose c f   {\motif_fi_oct_maj_chord}
+  \transpose c fis {\motif_fi_oct_maj_chord}
+  \transpose c g   {\motif_fi_oct_maj_chord}
   |%
-  \transpose c aes {\motif_root_oct_maj_chord}
-  \transpose c a   {\motif_root_oct_maj_chord}
-  \transpose c bes {\motif_root_oct_maj_chord}
-  \transpose c b   {\motif_root_oct_maj_chord}
+  \transpose c aes {\motif_fi_oct_maj_chord}
+  \transpose c a   {\motif_fi_oct_maj_chord}
+  \transpose c bes {\motif_fi_oct_maj_chord}
+  \transpose c b   {\motif_fi_oct_maj_chord}
   |%
-  \transpose c c'  {\motif_root_oct_maj_chord}
-  \transpose c b   {\motif_root_oct_maj_chord}
-  \transpose c bes {\motif_root_oct_maj_chord}
-  \transpose c a   {\motif_root_oct_maj_chord}
+  \transpose c c'  {\motif_fi_oct_maj_chord}
+  \transpose c b   {\motif_fi_oct_maj_chord}
+  \transpose c bes {\motif_fi_oct_maj_chord}
+  \transpose c a   {\motif_fi_oct_maj_chord}
   |%
-  \transpose c aes {\motif_root_oct_maj_chord}
-  \transpose c g   {\motif_root_oct_maj_chord}
-  \transpose c fis {\motif_root_oct_maj_chord}
-  \transpose c f   {\motif_root_oct_maj_chord}
+  \transpose c aes {\motif_fi_oct_maj_chord}
+  \transpose c g   {\motif_fi_oct_maj_chord}
+  \transpose c fis {\motif_fi_oct_maj_chord}
+  \transpose c f   {\motif_fi_oct_maj_chord}
   |%
-  \transpose c e   {\motif_root_oct_maj_chord}
-  \transpose c des {\motif_root_oct_maj_chord}
-  \transpose c d   {\motif_root_oct_maj_chord}
-  \transpose c des {\motif_root_oct_maj_chord}
+  \transpose c e   {\motif_fi_oct_maj_chord}
+  \transpose c des {\motif_fi_oct_maj_chord}
+  \transpose c d   {\motif_fi_oct_maj_chord}
+  \transpose c des {\motif_fi_oct_maj_chord}
   |%
   <c e g c >1
   |%
