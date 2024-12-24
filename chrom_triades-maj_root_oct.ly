@@ -74,5 +74,131 @@ triades_root_oct_maj_chord = \relative c' {
     \tempo 4=60
   }
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%   Triades 4 sons root_broken_un/deux
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+motif_root_oct_maj_broken_un = \relative c'{
+  c16 e g c  
+}
+motif_root_oct_maj_broken_deux = \relative c'{
+  c'16 g e c  
+}
+triades_root_oct_maj_brok_un_deux = \relative c' {
+  \global
+  \motif_root_oct_maj_broken_un 
+  \transpose c des {\motif_root_oct_maj_broken_un}
+  \transpose c d   {\motif_root_oct_maj_broken_un}
+  \transpose c ees {\motif_root_oct_maj_broken_un}
+  |%
+  \transpose c e   {\motif_root_oct_maj_broken_un}
+  \transpose c f   {\motif_root_oct_maj_broken_un}
+  \transpose c fis {\motif_root_oct_maj_broken_un}
+  \transpose c g   {\motif_root_oct_maj_broken_un}
+  |%
+  \transpose c aes {\motif_root_oct_maj_broken_un}
+  \transpose c a   {\motif_root_oct_maj_broken_un}
+  \transpose c bes {\motif_root_oct_maj_broken_un}
+  \transpose c b   {\motif_root_oct_maj_broken_un}
+  |%
+  \transpose c c'  {\motif_root_oct_maj_broken_un}
+  <c' e g c>2.
+  |%
+  \transpose c c'  {\motif_root_oct_maj_broken_deux}
+  \transpose c b   {\motif_root_oct_maj_broken_deux}
+  \transpose c bes {\motif_root_oct_maj_broken_deux}
+  \transpose c a   {\motif_root_oct_maj_broken_deux}
+  |%
+  \transpose c aes {\motif_root_oct_maj_broken_deux}
+  \transpose c g   {\motif_root_oct_maj_broken_deux}
+  \transpose c fis {\motif_root_oct_maj_broken_deux}
+  \transpose c f   {\motif_root_oct_maj_broken_deux}
+  |%
+  \transpose c e   {\motif_root_oct_maj_broken_deux}
+  \transpose c des {\motif_root_oct_maj_broken_deux}
+  \transpose c d   {\motif_root_oct_maj_broken_deux}
+  \transpose c des {\motif_root_oct_maj_broken_deux}
+  |%
+  c16 g e c~c2.
+  |%
+}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------------------------
+\score {
+   <<
+    \new Staff = "triades_root_oct_maj_brok_un_deux" \with {
+      midiInstrument = "acoustic grand"
+      instrumentName = \markup { \concat {N \super ° } 2 }
+    %\override InstrumentName.self-alignment-X = #RIGHT
+    \override InstrumentName.font-series = #'bold
+    } 
+    \triades_root_oct_maj_brok_un_deux
+   >>
+  \layout { }
+  \midi {
+    \tempo 4=60
+  }
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%   Triades 4 sons FI_broken_trois/quatre
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+motif_fi_oct_maj_broken_trois = \relative c'{
+  e16 c' g e'  
+}
+motif_fi_oct_maj_broken_quatre = \relative c'{
+  e'16 g, c e,  
+}
+triades_fi_oct_maj_brok_trois_quatre = \relative c' {
+  \global
+  \motif_fi_oct_maj_broken_trois 
+  \transpose c des {\motif_fi_oct_maj_broken_trois}
+  \transpose c d   {\motif_fi_oct_maj_broken_trois}
+  \transpose c ees {\motif_fi_oct_maj_broken_trois}
+  |%
+  \transpose c e   {\motif_fi_oct_maj_broken_trois}
+  \transpose c f   {\motif_fi_oct_maj_broken_trois}
+  \transpose c fis {\motif_fi_oct_maj_broken_trois}
+  \transpose c g   {\motif_fi_oct_maj_broken_trois}
+  |%
+  \transpose c aes {\motif_fi_oct_maj_broken_trois}
+  \transpose c a   {\motif_fi_oct_maj_broken_trois}
+  \transpose c bes {\motif_fi_oct_maj_broken_trois}
+  \transpose c b   {\motif_fi_oct_maj_broken_trois}
+  |%
+  \transpose c c'  {\motif_fi_oct_maj_broken_trois}
+  <e' g c e>2.
+  |%
+  \transpose c c'  {\motif_fi_oct_maj_broken_quatre}
+  \transpose c b   {\motif_fi_oct_maj_broken_quatre}
+  \transpose c bes {\motif_fi_oct_maj_broken_quatre}
+  \transpose c a   {\motif_fi_oct_maj_broken_quatre}
+  |%
+  \transpose c aes {\motif_fi_oct_maj_broken_quatre}
+  \transpose c g   {\motif_fi_oct_maj_broken_quatre}
+  \transpose c fis {\motif_fi_oct_maj_broken_quatre}
+  \transpose c f   {\motif_fi_oct_maj_broken_quatre}
+  |%
+  \transpose c e   {\motif_fi_oct_maj_broken_quatre}
+  \transpose c des {\motif_fi_oct_maj_broken_quatre}
+  \transpose c d   {\motif_fi_oct_maj_broken_quatre}
+  \transpose c des {\motif_fi_oct_maj_broken_quatre}
+  |%
+  e16 g, c e,~e2.
+  |%
+}
+
+%-------------------------------------------------------------------------
+\score {
+   <<
+    \new Staff = "triades_fi_oct_maj_brok_trois_quatre" \with {
+      midiInstrument = "acoustic grand"
+      instrumentName = \markup { \concat {N \super ° } 3 }
+    %\override InstrumentName.self-alignment-X = #RIGHT
+    \override InstrumentName.font-series = #'bold
+    } 
+    \triades_fi_oct_maj_brok_trois_quatre
+   >>
+  \layout { }
+  \midi {
+    \tempo 4=60
+  }
+}
