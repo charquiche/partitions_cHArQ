@@ -145,7 +145,7 @@ motif_fi_oct_maj_broken_trois = \relative c'{
   e16 c' g e'  
 }
 motif_fi_oct_maj_broken_quatre = \relative c'{
-  e'16 g c e  
+  e'16 g, c e,  
 }
 triades_fi_oct_maj_brok_trois_quatre = \relative c' {
   \global
@@ -182,7 +182,7 @@ triades_fi_oct_maj_brok_trois_quatre = \relative c' {
   \transpose c d   {\motif_fi_oct_maj_broken_quatre}
   \transpose c des {\motif_fi_oct_maj_broken_quatre}
   |%
-  e'16 g c e~e2.
+  e16 g, c e,~e2.
   |%
 }
 
@@ -191,7 +191,7 @@ triades_fi_oct_maj_brok_trois_quatre = \relative c' {
    <<
     \new Staff = "triades_fi_oct_maj_brok_trois_quatre" \with {
       midiInstrument = "acoustic grand"
-      instrumentName = \markup { \concat {N \super ° } 2 }
+      instrumentName = \markup { \concat {N \super ° } 3 }
     %\override InstrumentName.self-alignment-X = #RIGHT
     \override InstrumentName.font-series = #'bold
     } 
@@ -202,3 +202,6 @@ triades_fi_oct_maj_brok_trois_quatre = \relative c' {
     \tempo 4=60
   }
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%   ok 24/12/24 15:19
