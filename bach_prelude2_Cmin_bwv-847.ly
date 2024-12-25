@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%
 \header {
   title = "Praeludium II"
-  subtitle = "En Do mineur, bv 847, Clavier bien tempéré"
+  subtitle = "Do mineur, bwv 847, Clavier bien tempéré"
   composer ="BAcH"
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,24 +21,42 @@ global = {
 chords_A = \chordmode {
  \set minorChordModifier = \markup { "-" }% symbole accords mineurs %
  c1:m
- f1:m7+
+ f1:m7+/c
  b1:dim7/c
  c1:m
+ aes1:7+/c
+ d:9/c
+
+
+
+
+
+
+
+
+
 }
+%-----------------------------------------------
 right = \relative c'' {
   \global
   % C- add9,4
-  c16 ees, d ees     c ees d ees
-  c' ees, d ees    c ees d ees
+  c16-5 ees,-2 d-1 ees    c-1 ees d ees
+  c' ees, d ees           c ees d ees
   %Fmin/maj 9
-  aes f e f          c f e f 
-  aes f e f          c f e f 
+  aes-5 f-3 e-2 f         c-1 f e f 
+  aes f e f               c f e f 
   %Bdim7 /C
-  b f ees! f          d f ees f
-  b f ees f          d f ees f         
+  b-5 f-3 ees!-2 f        d-1 f ees f
+  b f ees f               d f ees f         
   %C- add 9,4
-  c' g f g           ees g f g 
-  c g f g           ees g f g
+  c'-5 g-2 f-1 g          ees-1 g f g 
+  c g f g                 ees g f g
+  %Ab maj 9
+  ees'-5 aes,-3 g-2 aes   ees-1 aes g aes
+  ees' aes, g aes   ees   aes g aes 
+  %D9
+  d-5 fis,-2 e-1 fis      d-1 fis e fis
+  d' fis, e fis            d fis e fis 
 
   
 }
@@ -46,17 +64,23 @@ right = \relative c'' {
 left = \relative c' {
   \global
   % C- add9,4
-  c,16 g' f g        ees g f g 
-  c,16 g' f g        ees g f g 
+  c,16_5 g'_1 f_2 g       ees_3 g f g 
+  c,16 g' f g             ees g f g 
   %Fmin/maj 9
-  c, aes' g aes       f aes g aes
-  c, aes' g aes       f aes g aes
+  c,_5 aes'_1 g_2 aes     f_3 aes g aes
+  c, aes' g aes           f aes g aes
   %Bdim7 /C
-  c, aes' g aes       f aes g aes
-  c, aes g aes        f aes g aes
+  c, aes' g aes           f aes g aes
+  c, aes g aes            f aes g aes
   %C- add 9,4
-  c ees d ees        g ees d ees
-  c ees d ees        g ees d ees
+  c_5 ees_2 d_3 ees       g_1 ees d ees
+  c ees d ees             g ees d ees
+  %Ab maj 9
+  c_5 c'_1 bes_2 c        aes_3 c bes c
+  c, c' bes c             aes c bes c
+  %D9
+  c,_5 a'_1 g_2 a         fis_3 a g a
+  c, a' g a               fis a g a
   
   
   
