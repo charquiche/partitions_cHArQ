@@ -1,6 +1,11 @@
 \version "2.24.3"
 \paper {
   ragged-right = ##f	% pour occuper toute la ligne
+  indent = #0 % pas d'indentation de la première portée
+  top-margin = 2
+  left-margin = 5
+  right-margin = 5
+  bottom-margin = 2
 }
 
 %%%%%%%%%%%%%%%%%%%%
@@ -107,7 +112,7 @@ right_A = \relative c'' {
   %Cmin/maj9
   ees-4 c-3 b-2 c         g-1 c b c
   %Cmin/maj9/Bb
-  ees c b c               g c b c
+  ees-5 c-3 b c               g c b c
   % Fmin7
   f,-1 ees'-4 d-3 ees     f-5 ees d ees
   f, ees' d ees           f ees d ees
@@ -139,9 +144,9 @@ left_A = \relative c' {
   c, aes' g aes           f aes g aes
   %Bdim7 /C
   c, aes' g aes           f aes g aes
-  c, aes g aes            f aes g aes
+  c, aes' g aes           f aes g aes
   %C- add 9,4
-  c_5 ees_2 d_3 ees       g_1 ees d ees
+  c,_5 ees_2 d_3 ees       g_1 ees d ees
   c ees d ees             g ees d ees
   %Ab maj 9
   c_5 c'_1 bes_2 c        aes_3 c bes c
@@ -183,11 +188,11 @@ left_A = \relative c' {
   c_5 f_2 e_3 f           aes_1 f e f
   c f e f                 aes f e f 
   %Cmin/maj9
-  c_4 ees_2 d_3 ees       f_1 ees d ees
+  c_5 ees_2 d_3 ees       f_1 ees d ees
   %Cmin/maj9 /Bb
-  bes_4 ees_2 d_3 ees     f_1 ees d ees
+  bes_5 ees_2 d_3 ees     f_1 ees d ees
   % Fmin7
-  aes,_4 c_2 b_3 c        d_1 c b c
+  aes,_5 c_2 b_3 c        d_1 c b c
   aes c b c               d c d c
   %F#°7/A
   a_5 ees'_1 d_2 ees      c_3 ees d ees  
@@ -299,7 +304,7 @@ left_B = \relative c{
     }
   >>
   %---------------------------------------------------------
-  \layout { }
+  \layout {}
   \midi {
     \tempo 4=100
   }
